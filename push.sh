@@ -15,5 +15,6 @@ git push origin master
 rsync -ravzp --exclude-from './push.exclude' ./ ./svn/trunk
 rsync -ravzp ./assets/ ./svn/assets
 cd svn
+svn add trunk/*
 svn ci -m "$1"
 cd ../
